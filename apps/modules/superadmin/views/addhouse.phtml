@@ -1,0 +1,101 @@
+<div class="block-header">
+	<h2>NEW HOUSE
+        <small>Drag the marker to choose the location</small>
+    </h2>
+</div>
+<div class="row">
+<p style="float: right">
+	<a id="next">Next
+	<i class="zmdi zmdi-arrow-right" ></i> 
+	</a>
+</p>
+</div>
+<form role="form" method="post" action="<?= @$this->url->get('superadmin/house/add'); ?>" id="house-form">
+	<div class="card" id="first-view">
+		<div id="map" class="houses-map">
+		</div>
+		<input type="hidden" value="" name="longitude" id="long">
+		<input type="hidden" value="" name="latitude" id="lat">
+	</div>
+	<div id="second-view">
+		<div class="row">
+	        <p style="float: left">
+	            <a id="previous"> 
+	            <i class="zmdi zmdi-arrow-left" ></i> 
+	            Previous
+	            </a>
+	        </p>
+    	</div>
+	    <div class="card">
+	        <div class="card-header">
+	            <h2>Other Information</h2>
+	        </div>
+	        <div class="card-body card-padding">
+	            	<label for="estate">House Type</label></br>
+	            	<div class="form-group fg-line">
+	                    <label class="radio radio-inline m-r-20">
+	                        <input type="radio" name="housetype" id="flat" value="0">
+	                        <i class="input-helper"></i>
+	                        Apartment
+	                    </label>
+
+	                    <label class="radio radio-inline m-r-20">
+	                        <input type="radio" name="housetype" id="massionette" value="1">
+	                        <i class="input-helper"></i>
+	                        Massionette/Bungalow
+	                    </label>
+	                </div>
+	                <div class="form-group fg-line">
+	                    <label for="estate">Estate Name</label>
+	                    <input type="text" class="form-control input-sm" id="estate" name="estate"
+	                           placeholder="Estate">
+	                </div>
+	                <div class="form-group fg-line">
+	                    <label for="house_no">House Number</label>
+	                    <input type="text" class="form-control input-sm" id="house_no" name="house_no"
+	                           placeholder="House Number">
+	                </div>
+	                <div id="flatsfields">
+	                	<div class="form-group fg-line">
+	    	                <label for="block">Block</label>
+	    	                <input type="number" class="form-control input-sm" id="block" name="block"
+	    	                       placeholder="Block">
+	                	</div>
+	                	<div class="form-group fg-line">
+	    	                <label for="firstname">Floor</label>
+	    	                <input type="number" class="form-control input-sm" id="floor" name="floor"
+	    	                       placeholder="Floor">
+	                	</div>
+	                </div>
+	                <div class="form-group ">
+	                    <div class="m-b-25">
+	                        <p class="f-500 m-b-15 c-black">Rent Currency</p>
+
+	                        <select class="selectpicker form-control" data-live-search="true" name="currency_id">
+	                            <?= @$currency_string ?>
+	                        </select>
+	                    </div>
+	                </div>
+	                <div class="form-group fg-line">
+	                    <label for="rentamount">Rent Amount</label>
+	                    <input type="text" class="form-control input-sm" id="rentamount" name="rentamount"
+	                           placeholder="Amount">
+	                </div>
+	                <div class="form-group fg-line">
+	                    <label for="facilities">Facilities</label>
+	                    <textarea class="form-control auto-size" name="facilities" placeholder="eg number of bedrooms, bathrooms etc"></textarea>
+	                </div>
+	                <div class="form-group">
+	                    <div class="m-b-25">
+	                        <p class="f-500 m-b-15 c-black">Landlord</p>
+
+	                        <select class="selectpicker form-control" data-live-search="true" name="landlord_id">
+	                            <?= @$landlords_string ?>
+	                        </select>
+	                    </div>
+	                </div>
+	                <button type="submit" id="submit" class="btn btn-primary btn-sm m-t-10">Submit</button>
+	        </div>
+	    </div>
+	</div>
+</form>

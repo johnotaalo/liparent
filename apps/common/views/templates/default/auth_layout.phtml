@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <?php $this->assets->outputCss('css'); ?>
+
+    </head>
+
+    <body>
+        <div class="login-content">
+            
+            <!-- Login -->
+            <div class="lc-block toggled" id="l-login">
+                <div>
+                    <h3 class="main-title">LIPA RENT SYSTEM</h3>
+                </div>
+                <div class="lcb-form">
+                    <?php $this->getContent(); ?>
+                
+                <?= @$content ?>
+                </div>
+            
+            <div class="lcb-navigation">
+                <a href="#" data-ma-action="login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
+            </div>
+            </div>
+            
+            <?php $this->flashSession->output(); ?>
+        </div>
+        <?php $this->assets->outputJs('js'); ?>
+    </body>
+</html>

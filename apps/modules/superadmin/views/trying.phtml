@@ -1,0 +1,101 @@
+
+<div id="second-view">
+    <div class="row">
+        <p style="float: left">
+            <a id="previous"> 
+            <i class="zmdi zmdi-arrow-left" ></i> 
+            Previous
+            </a>
+        </p>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <h2>Other Information</h2>
+        </div>
+        <div class="card-body card-padding">
+            <form role="form" method="post" action="<?= @$this->url->get('superadmin/house/add'); ?>">
+            	
+            	<label for="estate">House Type</label></br>
+            	<div class="form-group fg-line">
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="housetype" id="flat" value="0">
+                        <i class="input-helper"></i>
+                        Apartment
+                    </label>
+
+                    <label class="radio radio-inline m-r-20">
+                        <input type="radio" name="housetype" id="massionette" value="1">
+                        <i class="input-helper"></i>
+                        Massionette/Bungalow
+                    </label>
+                </div>
+                <div class="form-group fg-line">
+                    <label for="estate">Estate Name</label>
+                    <input type="text" class="form-control input-sm" id="estate" name="estate"
+                           placeholder="Estate">
+                </div>
+                <div id="flatsfields">
+                	<div class="form-group fg-line">
+    	                <label for="block">Block</label>
+    	                <input type="number" class="form-control input-sm" id="block" name="block"
+    	                       placeholder="Block">
+                	</div>
+                	<div class="form-group fg-line">
+    	                <label for="firstname">Floor</label>
+    	                <input type="number" class="form-control input-sm" id="floor" name="floor"
+    	                       placeholder="Floor">
+                	</div>
+                </div>
+                <div class="form-group ">
+                    <div class="m-b-25">
+                        <p class="f-500 m-b-15 c-black">Rent Currency</p>
+
+                        <select class="selectpicker form-control" data-live-search="true">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Tent</option>
+                            <option>Flashlight</option>
+                            <option>Toilet Paper</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group fg-line">
+                    <label for="firstname">Rent Amount</label>
+                    <input type="text" class="form-control input-sm" id="surname" name="surname"
+                           placeholder="Amount">
+                </div>
+                <div class="form-group fg-line">
+                    <label for="phone">Facilities</label>
+                    <input type="text" class="form-control input-sm" id="phone" name="phone"
+                           placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <div class="m-b-25">
+                        <p class="f-500 m-b-15 c-black">Landlord</p>
+
+                        <select class="selectpicker form-control" data-live-search="true">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Tent</option>
+                            <option>Flashlight</option>
+                            <option>Toilet Paper</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group fg-line">
+                    <div class="checkbox m-b-15">
+                        <label>
+                            <input type="checkbox" value="1" name="available">
+                            <i class="input-helper"></i>
+                            Available
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm m-t-10">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

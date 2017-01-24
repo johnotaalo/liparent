@@ -1,0 +1,17 @@
+<script type="text/javascript">
+$( document ).ready(function() {
+
+	var flash = "<?= $flash;?>";
+    console.log(flash);
+
+    if(flash !== "0" && flash !== "" && flash !== 0)
+    {
+      swal({
+        type: "success",
+        text: flash,
+        title: "Success!"
+      });
+    }
+
+});
+</script>

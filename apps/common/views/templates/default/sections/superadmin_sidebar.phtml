@@ -1,0 +1,31 @@
+<li class="active">
+    <a href="<?php echo $this->url->get('superadmin/user/index'); ?>"><i class="zmdi zmdi-home"></i> Home</a>
+</li>
+<li class="sub-menu">
+    <a data-ma-action="submenu-toggle"><i class="zmdi zmdi-home"></i> Houses</a>
+
+    <ul>
+        <li><a href="<?php echo $this->url->get('superadmin/house/list'); ?>">View houses</a></li>
+        <li><a href="<?php echo $this->url->get('superadmin/house/add'); ?>">Add a house</a></li>
+    </ul>
+</li>
+<li class="sub-menu">
+    <a data-ma-action="submenu-toggle"><i class="zmdi zmdi-account"></i> Landlords</a>
+
+    <ul>
+        <li><a href="#">View Landlords</a></li>
+        <li><a href="<?php echo $this->url->get('superadmin/landlord/add'); ?>">Add a landlord</a></li>
+    </ul>
+</li>
+<li class="sub-menu">
+    <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-account"></i> Tenants</a>
+
+    <ul>
+        <li><a href="#">View Tenants</a></li>
+        <li><a href="<?php echo $this->url->get('superadmin/tenant/add'); ?>">Add Tenants</a></li>
+    </ul>
+</li>
+<li><a href="#"><i class="zmdi zmdi-card"></i> Payments</a></li>
+<li><a href="<?php echo $this->url->get("superadmin/account/profile");?>"><i class="zmdi zmdi-account"></i> View Account</a></li>
+<li><a href="<?php echo $this->url->get("auth/user/signout");?>"><i class="zmdi zmdi-time-restore"></i> Logout</a></li>
+<?= @$usergroup_list; ?>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= $this->tag->getTitle() ?>
+    <?php $this->assets->outputCss('css'); ?>
+</head>
+<body>
+<header id="header" class="clearfix" data-ma-theme="blue">
+    <ul class="h-inner">
+
+        <li class="hi-logo hidden-xs">
+            <a href="index.html">LIPA RENT</a>
+        </li>
+
+        <li class="pull-right">
+            <ul class="hi-menu">
+
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#">
+                        <i class="him-icon zmdi zmdi-email"></i>
+                        <i class="him-counts">6</i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg pull-right">
+                        <div class="list-group">
+                            <div class="lg-header">
+                                Messages
+                            </div>
+                            <div class="lg-body">
+                            
+                            </div>
+                            <a class="view-more" href="#">View All</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="#">
+                        <i class="him-icon zmdi zmdi-notifications"></i>
+                        <i class="him-counts">9</i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg pull-right">
+                        <div class="list-group him-notification">
+                            <div class="lg-header">
+                                Notification
+
+                                <ul class="actions">
+                                    <li class="dropdown">
+                                        <a href="#" data-ma-action="clear-notification">
+                                            <i class="zmdi zmdi-check-all"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg-body">
+                                
+                            </div>
+
+                            <a class="view-more" href="#">View Previous</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown hidden-xs">
+                    <a data-toggle="dropdown" href="#">
+                        <i class="him-icon zmdi zmdi-view-list-alt"></i>
+                        <i class="him-counts">2</i>
+                    </a>
+                    <div class="dropdown-menu pull-right dropdown-menu-lg">
+                        <div class="list-group">
+                            <div class="lg-header">
+                                Tasks
+                            </div>
+                            <div class="lg-body">
+
+                            </div>
+
+                            <a class="view-more" href="#">View All</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<section id="main">
+    <aside id="sidebar" class="sidebar c-overflow">
+        <div class="s-profile">
+            <a href="#" data-ma-action="profile-menu-toggle">
+                <div class="sp-pic">
+                    <img src="img/profile-pics/1.jpg" alt="">
+                </div>
+
+                <div class="sp-info">
+                    <?= strtoupper(@$username) ?>
+                </div>
+            </a>
+        </div>
+
+        <ul class="main-menu">
+           
+            <?= @$sidebar ?>
+        </ul>
+    </aside>
+    <section id="content">
+        <div class="container">
+
+            <?php $this->getContent() ?>
+            <?= @$content ?>
+        </div>
+    </section>
+</section>
+
+<footer id="footer">
+            Copyright &copy; 2016 Orwa and Mesa Dev.
+</footer>
+
+<!-- Page Loader -->
+<div class="page-loader">
+    <div class="preloader pls-blue">
+        <svg class="pl-circular" viewBox="25 25 50 50">
+            <circle class="plc-path" cx="50" cy="50" r="20" />
+        </svg>
+
+        <p>Please wait...</p>
+    </div>
+</div>
+<!--CDN source -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1HLXGnDrvdy4UC581MuljSFvAIqMFPd4&callback=initMap"></script>
+<?php $this->assets->outputJs('js'); ?>
+
+<?php
+foreach($javascript as $script)
+{      
+echo $script ;
+}
+?>
+</body>
+  
+</html>

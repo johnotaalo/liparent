@@ -1,0 +1,70 @@
+<div class="row">
+    <p style="float: left">
+        <a id="house-list" href="<?= @$this->url->get('superadmin/house/list'); ?>"> 
+        <i class="zmdi zmdi-arrow-left" ></i> 
+        Back to houses list
+        </a>
+    </p>
+</div>
+<div class="card">
+	<div class="card-header">
+      <h2>House Details</h2>
+  	</div>
+  	<div class="card-body card-padding">
+  		<p class="f-500 m-b-5 c-black">House Type</p>
+	    <small>
+	    	<?= @$house_type ?>
+	    </small>
+	    <br>
+	    <br>
+		<p class="f-500 m-b-5 c-black">Region</p>
+	    <small>
+	    	<?= @$location ?>
+	    </small>
+	    <br>
+	    <br>
+	    <p class="f-500 m-b-5 c-black">Estate</p>
+	    <small>
+	    	<?= @$housedetail->estate_name ?>
+	    </small>
+	    <br>
+	    <br>
+	    <p class="f-500 m-b-5 c-black">House Number</p>
+	    <small>
+	    	<?= @$housedetail->house_no ?>
+	    </small>
+	    <br>
+	    <br>
+	    <form role="form" method="post" action="<?= @$this->url->get('superadmin/house/assign'); ?>" id="assign-house-form">
+		    <div class="form-group">
+	            <div class="m-b-25">
+	                <p class="f-500 m-b-15 c-black">Choose Tenant</p>
+
+	                <select class="selectpicker form-control" data-live-search="true" name="tenant_id" id="assign_tenants_select">
+	                    <?= @$tenants_string ?>
+	                </select>
+	            </div>
+	        </div>
+	        <input type="hidden" value=" <?= @$houseid ?> " name="house_id">
+	        <button type="submit" id="submit" class="btn btn-primary btn-sm m-t-10">Assign Tenant</button>
+	        <button class="btn btn-primary btn-sm m-t-10 pull-right" data-href="<?= @$this->url->get('superadmin/tenant/add/json'); ?>" onclick = "addTenant(this)" id="tenant-new">New Tenant</button>
+    	</form>
+  	</div>
+</div>
+<!-- Modal Default -->
+<div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" id="save">Save changes</button>
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

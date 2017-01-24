@@ -1,0 +1,24 @@
+.main-title{
+	color : #fff;
+}
+
+.houses-map{
+	height:650px;
+}
+
+.paginate_button{
+    text-decoration: none !important; 
+    color: #7E7E7E !important; 
+    background-color: #E2E2E2 !important;
+    border: 1px solid #fff !important;
+    border-radius: 100% !important;
+    margin-left: -1px !important;
+}
+#houses_table_previous{
+	border-radius: 0 !important;
+	background: transparent !important;
+}
+#houses_table_next{
+	border-radius: 0 !important;
+	background: transparent !important;
+}
