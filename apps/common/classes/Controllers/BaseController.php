@@ -56,7 +56,7 @@ class BaseController extends Controller
                    $this->view->sidebar = $this->view->getPartial('sections/landlord_sidebar');
                     break;
                   case 'tenant':
-                   $this->view->sidebar = $this->view->getPartial('sections/tenant_sidebar');
+                    // $this->view->sidebar = $this->view->getPartial('tenant_sidebar');
                     break;
                   case 'admin':
                    $this->view->sidebar = $this->view->getPartial('sections/admin_sidebar');

@@ -1,0 +1,61 @@
+<div class="card">
+	<div class="card-header">
+		<h2><i class="zmdi zmdi-pin-drop"></i> My House Location<small>Pin your house</small></h2>
+	</div>
+	<div class="card-body">
+		<div id = "myMap" style="width:100%;min-height: 250px;background: teal;"></div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header">
+				<h2><i class="zmdi zmdi-city-alt"></i> My House<small>Details about your current home</small></h2>
+			</div>
+			<div class="card-body card-padding">
+				<?php if(count($house_details) > 0){ ?>
+					<table class="table">
+						<tr>
+							<th>Estate Name</th>
+							<td><?= @$house_details->house_estatename; ?></td>
+						</tr>
+						<tr>
+							<th>Block</th>
+							<td><?= @$house_details->house_block; ?></td>
+						</tr>
+						<tr>
+							<th>Estate Name</th>
+							<td><?= @$house_details->house_no; ?></td>
+						</tr>
+					</table>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-header">
+				<h2><i class="zmdi zmdi-face"></i> My Landlord<small>Details about your current home</small></h2>
+			</div>
+			<div class="card-body card-padding">
+				<?php if(count($house_details) > 0){ ?>
+					<table class="table">
+						<tr>
+							<th>Landlord Name</th>
+							<td><?= @$house_details->landlord_firstname . ' ' . $house_details->landlord_lastname; ?></td>
+						</tr>
+						<tr>
+							<th>Landlord Phone</th>
+							<td>N/A</td>
+						</tr>
+						<tr>
+							<th>Landlord Email</th>
+							<td>N/A</td>
+						</tr>
+					</table>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -25,7 +25,7 @@
         <li><a href="<?php echo $this->url->get('superadmin/tenant/add'); ?>">Add Tenants</a></li>
     </ul>
 </li>
-<li><a href="#"><i class="zmdi zmdi-card"></i> Payments</a></li>
+<li><a href="<?= @$this->url->get('superadmin/payments'); ?>"><i class="zmdi zmdi-card"></i> Payments</a></li>
 <li><a href="<?php echo $this->url->get("superadmin/account/profile");?>"><i class="zmdi zmdi-account"></i> View Account</a></li>
 <li><a href="<?php echo $this->url->get("auth/user/signout");?>"><i class="zmdi zmdi-time-restore"></i> Logout</a></li>
 <?= @$usergroup_list; ?>

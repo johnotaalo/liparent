@@ -1,0 +1,38 @@
+<style type="text/css">
+	.circle {
+		border-radius: 50%;
+		width: 10px;
+		height: 10px; 
+		/* width and height can be anything, as long as they're equal */
+	}
+
+	.circle.red{
+		background: #C62828;
+	}
+
+	.circle.green{
+		background: #1B5E20;
+	}
+</style>
+<div class="card">
+	<div class="card-header">
+		<h2 class="card-title">
+			User Management
+		</h2>
+		<small>Manage all the users in the system</small>
+	</div>
+	<div class="card-body card-padding">
+		<table class = "table table-bordered">
+			<thead>
+				<th>#</th>
+				<th>Email Address</th>
+				<th>Group</th>
+				<th>Status</th>
+				<th>Date Created</th>
+			</thead>
+			<tbody>
+				<?= @$users_table; ?>
+			</tbody>
+		</table>
+	</div>
+</div>

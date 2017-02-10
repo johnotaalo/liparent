@@ -1,0 +1,21 @@
+<div class="card">
+	<div class="card-header">
+		<h2 class="card-title">Tenant Transactions</h2>
+		<small>Shows all the transactions ever made by tenants</small>
+	</div>
+	<div class="card-body card-padding">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<th>#</th>
+				<th>Tenant Name</th>
+				<th>Payment Period</th>
+				<th>Transaction Code</th>
+				<th>Date</th>
+				<th>Actions</th>
+			</thead>
+			<tbody>
+				<?= @$transactions_table; ?>
+			</tbody>
+		</table>
+	</div>
+</div>

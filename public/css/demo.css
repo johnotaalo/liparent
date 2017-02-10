@@ -1,15 +1,97 @@
-/*-------------------------------------
-    Animation
---------------------------------------*/
-.animation-demo .row {
-    margin: 25px -6px 0;
-    margin-bottom: -10px;
+/*---------------------------------
+    Colored Header
+----------------------------------*/
+.header-colors {
+    position: absolute;
+    right: -143px;
+    top: 100px;
+    width: 142px;
+    background: #fff;
+    z-index: 1000;
+    padding: 25px 25px 20px;
+    border-radius: 0 0 0 2px;
+    transition: all 300ms;
 }
 
-.animation-demo .card-body img {
-    width: 100%;
-    z-index: 1;
+.header-colors.toggled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    right: 0;
+}
+
+.hc-item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 4px;
     position: relative;
+    cursor: pointer;
+}
+
+.hc-item:hover {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.hc-item.selected:before {
+    content: '';
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: 6px;
+    left: 6px;
+}
+
+.hc-trigger {
+    font-size: 24px;
+    background: #FFF;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 41px;
+    position: absolute;
+    left: -40px;
+    top: 0;
+    border-radius: 2px 0 0 2px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #4C646F;
+}
+
+/*---------------------------------
+    Colors
+----------------------------------*/
+.color-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.cg-list {
+    padding: 15px 18px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.cg-list.dark {
+    color: #333;
+}
+
+.cg-list.divide {
+    margin-top: 5px;
+}
+
+/*---------------------------------
+    Animation
+----------------------------------*/
+.animation-demo .row {
+    margin: 15px -6px 0;
+    margin-bottom: -10px;
 }
 
 .animation-demo .col-xs-6 {
@@ -22,10 +104,20 @@
     text-transform: none;
 }
 
+.animation-demo .card-body {
+    padding: 0 15px 15px;
+}
 
-/*-------------------------------------
+.animation-demo .card-body > img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+/*---------------------------------
     Box Shadow
---------------------------------------*/
+----------------------------------*/
 .bs-item {
     background: #fff;
     margin-bottom: 30px;
@@ -36,38 +128,9 @@
     border-radius: 2px;
 }
 
-
-/*-------------------------------------
-    Icons
---------------------------------------*/
-.icons-demo .card-body .zmdi {
-    font-size: 23px;
-    vertical-align: middle;
-    margin-right: 10px;
-    width: 25px;
-    color: #333;
-}
-
-.icons-demo .card-body .col-sm-4 p {
-    padding: 0 7px;
-}
-
-.icons-demo .card-body .col-sm-4 p {
-    padding: 8px;
-    border-radius: 2px;
-    margin-bottom: 0;
-    color: #5e5e5e;
-    display: block;
-}
-
-.icons-demo .card-body .col-sm-4 p:hover {
-    background: rgba(0,0,0,0.05);
-}
-
-
-/*-------------------------------------
-    Buttons
---------------------------------------*/
+/*---------------------------------
+    Button
+----------------------------------*/
 .btn-colors > .btn {
     min-width: 112px;
 }
@@ -76,10 +139,33 @@
     margin: 0 5px 10px 0;
 }
 
+/*---------------------------------
+    Icons
+----------------------------------*/
+.icons-demo .card-body .zmdi {
+    font-size: 23px;
+    vertical-align: middle;
+    color: #333;
+    margin-right: 10px;
+}
 
-/*-------------------------------------
-    Colors
---------------------------------------*/
+.icons-demo .card-body .col-sm-4 {
+    padding: 0 7px;
+}
+
+.icons-demo .card-body .col-sm-4 p {
+    padding: 8px;
+    border-radius: 2px;
+    margin-bottom: 0;
+}
+
+.icons-demo .card-body .col-sm-4 p:hover {
+    background: #eee;
+}
+
+/*---------------------------------
+    Preloaders
+----------------------------------*/
 .color-block {
     height: 100px;
     color: rgba(255,255,255,0.9);
@@ -106,10 +192,17 @@
     font-size: 11px;
 }
 
+/*---------------------------------
+    Notifications & Dialog
+----------------------------------*/
+.notifications .btn {
+    width: 100%;
+    margin-bottom: 20px;
+}
 
-/*-------------------------------------
+/*---------------------------------
     Components
---------------------------------------*/
+----------------------------------*/
 .dropdown-basic-demo {
     display: inline-block;
     margin: 0 15px 20px 0;
@@ -118,13 +211,10 @@
 .dropdown-basic-demo .dropdown-menu {
     display: block;
     position: relative;
-    transform: scale(1);
-    opacity: 1;
-    filter: alpha(opacity=1);
     z-index: 0;
 }
 
-.dropdown-btn-demo .dropdown, .dropdown-btn-demo {
+.dropdown-btn-demo .dropdown, .dropdown-btn-demo .btn-group, .btn-demo .btn {
     display: inline-block;
     margin: 0 5px 7px 0;
 }
@@ -148,31 +238,3 @@
     z-index: 0;
 }
 
-
-/*-------------------------------------
-    Toggle Switch
---------------------------------------*/
-.toggle-switch-demo .ts-label {
-    min-width: 130px;
-}
-
-
-/*-------------------------------------
-    Notifications
---------------------------------------*/
-.notification-demo .btn {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-
-/*-------------------------------------
-    Other Components
---------------------------------------*/
-.media-demo .media {
-    margin-bottom: 25px;
-}
-
-.media-demo .media .media {
-    margin-top: 25px;
-}
