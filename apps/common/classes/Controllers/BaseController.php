@@ -118,7 +118,7 @@ class BaseController extends Controller
             $this->response->redirect("landlord/dashboard/index");
           }
           else if($user_group == "Tenant"){
-            $this->response->redirect("superadmin/user/index");
+            $this->response->redirect("tenant");
           }
           else if($user_group == "Admin"){
             $this->response->redirect("admin/dashboard/index");
